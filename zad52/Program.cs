@@ -1,9 +1,9 @@
 ﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 Console.Clear();
-int m = 3;
-int n = 4;
-double average = 0;
+int m = 5;
+int n = 3;
+
 int[,] mass = new int[m,n];
 Random rand = new Random();
 for (int i = 0; i < mass.GetLength(0); i++)
@@ -15,16 +15,15 @@ for (int i = 0; i < mass.GetLength(0); i++)
     }
     Console.WriteLine();
 }
-
-// void average(int[,] mass);
 {
     for (int i = 0; i < mass.GetLength(0); i++)
     {
+        double average = 0;
         for (int j = 0; j < mass.GetLength(1); j++)
         {
          average = average + mass[i,j]; 
         } 
-        Console.WriteLine($"строка {i+1} = " + average/n);
+        Console.WriteLine($"строка {i+1} = " + Math.Round(average/mass.GetLength(1), 2)); // округление до 0,00
     } 
 } 
 
