@@ -5,14 +5,14 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("где n = ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int[,] mass = new int[m,n];
+double[,] mass = new double[m,n];
 Random rand = new Random();
 for (int i = 0; i < mass.GetLength(0); i++)
 {
     for (int j = 0; j < mass.GetLength(1); j++)
     {
-        mass[i,j] = rand.Next(1,99);
-        Console.Write($"{mass[i,j]}" + " ");
+        mass[i,j] = rand.NextDouble() * 100;
+        Console.Write($"{Math.Round(mass[i,j], 2)}" + " ");
     }
     Console.WriteLine();
 }
