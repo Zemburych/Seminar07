@@ -15,15 +15,15 @@ for (int i = 0; i < mass.GetLength(0); i++)
     }
     Console.WriteLine();
 }
-{
-    for (int i = 0; i < mass.GetLength(0); i++)
+for (int j = 0; j < mass.GetLength(1); j++)
+
     {
         double average = 0;
-        for (int j = 0; j < mass.GetLength(1); j++)
+        for (int i = 0; i < mass.GetLength(0); i++)
         {
          average = average + mass[i,j]; 
         } 
-        Console.WriteLine($"строка {i+1} = " + Math.Round(average/mass.GetLength(1), 2)); // округление до 0,00
+        Console.WriteLine($"столбец {j+1} = " + Math.Round(average/mass.GetLength(0), 2)); // округление до 0,00
     } 
-} 
+
 
